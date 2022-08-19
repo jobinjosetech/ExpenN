@@ -1,16 +1,19 @@
-# expenn
+# ExpenN
 
-A new Flutter project.
+ExpenN is a mobile app, which helps in managing money.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+plan your finance ahead of time to stay on track with our budget.
 
-A few resources to get you started if this is your first Flutter project:
+## Requirements
+Here, are the requirements of the apps that we are expecting to implement.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  - [ ] Tracking the debits and credits.
+  - [ ] Track total budgets.
+  - [ ] Storing bill images with the expense.
+  - [ ] Store card, bank account and EMI details.
+  - [ ] Facility to monitor expenses through categories.
+  - [ ] Saving important bill payment dates and reminders
+  - [ ] Anomaly detection in unexpected expenses.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
