@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "627975007391",
+    "project_id": "expenn-64c98",
+    "storage_bucket": "expenn-64c98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627975007391:android:ff4ef651560e121405c6aa",
+        "android_client_info": {
+          "package_name": "com.jobin.expenn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627975007391-887p2dgu3tjtnu243abedf3i9vt5eeu4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jobin.expenn",
+            "certificate_hash": "6bc932fb723aa176c1102133db35dd5d33cc5266"
+          }
+        },
+        {
+          "client_id": "627975007391-ula5dkmdt5g4gg2mu4dg2jv5n5gm59f0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0LQx20Y4FqYDdQHCQxaNpgzWw9gKvo4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627975007391-ula5dkmdt5g4gg2mu4dg2jv5n5gm59f0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

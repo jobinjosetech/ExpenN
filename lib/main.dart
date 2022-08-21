@@ -1,7 +1,13 @@
+import 'package:expenn/authentication/authentication.dart';
+import 'package:expenn/dashboard/dashboard.dart';
 import 'package:expenn/welcome/welcome.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -15,6 +21,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   bool isWelcomeComplete = false;
+  bool isAuthenticated = false;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   @override
   void initState() {
@@ -25,11 +33,20 @@ class _MyAppState extends State<MyApp> {
 // Time to load welcome page
   void setTimer() {
     Future.delayed(Duration(milliseconds: 5000), () {
-      setState(() {
-        isWelcomeComplete = true;
-      });
+      if (_auth.currentUser != null) {
+        setState(() {
+          isAuthenticated = true;
+          isWelcomeComplete = true;
+        });
+      } else {
+        setState(() {
+          isWelcomeComplete = true;
+        });
+      }
     });
   }
+
+  void checkAuthentication() {}
 
   @override
   Widget build(BuildContext context) {
@@ -46,13 +63,9 @@ class _MyAppState extends State<MyApp> {
       ),
       home: !isWelcomeComplete
           ? Welcome()
-          : Scaffold(
-              body: Center(
-                  child: Text(
-                "hello",
-                style: Theme.of(context).textTheme.headline1,
-              )),
-            ),
+          : isAuthenticated
+              ? DashBoard()
+              : Authentication(),
     );
   }
 }
